@@ -1,15 +1,11 @@
 {
   "env": {
-    "jest": true,
     "browser": true
   },
   "extends": [
     "airbnb",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:testing-library/react",
-    "plugin:jest-dom/recommended",
-    "plugin:playwright/playwright-test",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -20,13 +16,7 @@
     "navigator": true,
     "fetch": true
   },
-  "plugins": [
-    "@typescript-eslint/eslint-plugin",
-    "react-hooks",
-    "testing-library",
-    "jest-dom",
-    "prettier"
-  ],
+  "plugins": ["@typescript-eslint/eslint-plugin", "react-hooks", "prettier"],
   "rules": {
     "react/jsx-filename-extension": [
       1,
@@ -90,8 +80,6 @@
     "@typescript-eslint/camelcase": 0,
     "import/prefer-default-export": 0,
     "import/no-extraneous-dependencies": 0,
-    "testing-library/no-wait-for-multiple-assertions": 0,
-    "playwright/missing-playwright-await": 0,
     "import/extensions": [
       "error",
       {
@@ -102,14 +90,6 @@
       }
     ]
   },
-  "overrides": [
-    {
-      "files": ["e2e/**/*.ts"],
-      "rules": {
-        "playwright/missing-playwright-await": ["error"]
-      }
-    }
-  ],
   "settings": {
     "import/resolver": {
       "node": {

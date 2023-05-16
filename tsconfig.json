@@ -28,11 +28,8 @@
     "declarations/*",
     "hooks/*",
     "helpers/*",
-    "e2e/*",
     "lib/*",
-    "__tests__/*",
     "config/*",
-    ".storybook/*",
     "**/*.tsx",
     "**/*.ts"
   ],

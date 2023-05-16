@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import * as dotenv from 'dotenv';
 import withAnalyzer from '@next/bundle-analyzer';
 
