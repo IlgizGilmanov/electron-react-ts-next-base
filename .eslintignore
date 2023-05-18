@@ -5,3 +5,4 @@ graphql/**/__generated__/**
 /test-results/
 /playwright-report/
 config/vars.ts
+/main

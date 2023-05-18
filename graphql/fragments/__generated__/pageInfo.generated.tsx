@@ -1,5 +1,3 @@
-import * as Types from '../../types';
-
 import { gql } from '@apollo/client';
 export type PageInfoFragment = {
   __typename?: 'PageInfo';

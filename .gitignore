@@ -17,6 +17,9 @@
 /out/
 /.dist/
 
+# electron
+/main
+
 # production
 /build
 

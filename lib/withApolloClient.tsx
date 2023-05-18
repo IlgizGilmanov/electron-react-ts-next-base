@@ -1,7 +1,14 @@
 import App from 'next/app';
 import fetch from 'isomorphic-unfetch';
 import { HttpsProxyAgent } from 'https-proxy-agent';
-import { ApolloClient, ApolloLink, HttpLink, InMemoryCache, ApolloProvider } from '@apollo/client';
+import {
+  ApolloClient,
+  ApolloLink,
+  HttpLink,
+  InMemoryCache,
+  ApolloProvider,
+  NormalizedCacheObject,
+} from '@apollo/client';
 
 import { withAccessTokenManager } from 'lib/auth/withAccessTokenManager';
 
@@ -12,7 +19,7 @@ import {
   createErrorLink,
 } from 'lib/apollo/apolloLinks';
 import { apolloPolicies } from 'lib/apollo/apolloPolicies';
-import { ApolloPageContext, TApolloClient, TAppPage } from 'lib/apollo/types';
+import { ApolloAppContext, ApolloPageContext, TApolloClient, TAppPage } from 'lib/apollo/types';
 
 import { PORT, GRAPHQL_APP_URL } from 'config/vars';
 
@@ -116,7 +123,7 @@ const initOnContext = (ctx: ApolloPageContext) => {
 };
 
 const withApollo = (PageComponent: TAppPage) => {
-  const WithApolloClient: TAppPage = pageProps => {
+  const WithApolloClient: TAppPage = (pageProps: any) => {
     const { apolloClient, apolloState, accessTokenManager } = pageProps;
     const client = apolloClient || initApolloClient(apolloState, { accessTokenManager });
 
@@ -127,7 +134,7 @@ const withApollo = (PageComponent: TAppPage) => {
     );
   };
 
-  WithApolloClient.getInitialProps = async context => {
+  WithApolloClient.getInitialProps = async (context: ApolloAppContext<NormalizedCacheObject>) => {
     const { apolloClient, accessTokenManager } = initOnContext(context.ctx);
 
     // Run wrapped getInitialProps methods

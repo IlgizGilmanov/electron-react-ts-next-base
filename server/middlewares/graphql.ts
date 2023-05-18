@@ -19,7 +19,9 @@ const handleResponse = ({ req, res, body }: { req: Request; res: Response; body:
     if (errors) {
       throw new Error(JSON.stringify(errors));
     }
-    const authOperationName = Object.keys(data).find(key => authOperationNames.includes(key));
+    const authOperationName = Object.keys(data).find(key =>
+      authOperationNames.includes(key),
+    ) as string;
 
     if (['signout'].includes(authOperationName)) {
       deleteRefreshToken({ res });
@@ -62,7 +64,7 @@ const graphqlProxyMidlleware = createProxyMiddleware({
     // send request body in correct format (after parsing body with body-parser library)
     const contentType = proxyReq.getHeader('Content-Type');
 
-    const writeBody = bodyData => {
+    const writeBody = (bodyData: string) => {
       proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData));
       proxyReq.write(bodyData);
     };

@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "es2017"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "outDir": "../main",
+    "baseUrl": "./",
+    "paths": {
+      "pages/*": ["../pages/*"],
+      "components/*": ["../components/*"],
+      "declarations/*": ["../declarations/*"],
+      "hooks/*": ["../hooks/*"],
+      "helpers/*": ["../helpers/*"],
+      "lib/*": ["../lib/*"],
+      "config/*": ["../config/*"],
+      "public/*": ["../public/*"],
+      "contexts/*": ["../contexts/*"],
+      "graphql/*": ["../graphql/*"],
+      "decorators/*": ["../decorators/*"]
+    }
+  },
+  "exclude": ["node_modules", "../server/*", "../server.ts", "*.generated.tsx"],
+  "include": [
+    "../pages/*",
+    "../components/*",
+    "../declarations/*",
+    "../hooks/*",
+    "../helpers/*",
+    "../lib/*",
+    "../config/*",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js"
+  ]
+}
