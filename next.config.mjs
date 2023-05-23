@@ -67,6 +67,8 @@ const nextConfig = {
     ASSET_HOST: process.env.ASSET_HOST || '',
     API_URL: process.env.API_URL,
     PRINT_HTTP_REQUEST_LOGS: process.env.PRINT_HTTP_REQUEST_LOGS,
+    DEFAULT_EMAIL: process.env.DEFAULT_EMAIL,
+    DEFAULT_PASSWORD: process.env.DEFAULT_PASSWORD,
   },
 };
 

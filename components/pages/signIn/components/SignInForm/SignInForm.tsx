@@ -2,6 +2,7 @@ import * as Yup from 'yup';
 
 import { useSignIn } from 'lib/apollo/hooks/actions/auth';
 
+import { DEFAULT_EMAIL, DEFAULT_PASSWORD } from 'config/vars';
 import {
   EMAIL_INVALID,
   PASSWORD_INVALID_FORMAT,
@@ -27,7 +28,7 @@ const SignInForm = () => {
         title: 'Email',
         placeholder: 'Email',
         testId: 'input-email',
-        initialValue: '',
+        initialValue: DEFAULT_EMAIL || '',
         validationSchema: Yup.string().email(EMAIL_INVALID).max(255).required(REQUIRED_FIELD),
       },
       {
@@ -36,7 +37,7 @@ const SignInForm = () => {
         title: 'Password',
         placeholder: 'Password',
         testId: 'input-password',
-        initialValue: '',
+        initialValue: DEFAULT_PASSWORD || '',
         validationSchema: Yup.string()
           .required(REQUIRED_FIELD)
           .trim()
