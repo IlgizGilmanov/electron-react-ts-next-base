@@ -5,8 +5,10 @@ const isDev = require('electron-is-dev');
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 1020,
-    height: 720,
+    // width: 1020,
+    width: 3000,
+    // height: 720,
+    height: 2000,
     webPreferences: {
       preload: path.join(__dirname, './preload.ts'),
     },
