@@ -13,7 +13,7 @@ export const HomePage: TNextPage = () => {
     <DefaultTemplate>
       <PageContent data-testid="page-content">
         <Title className="capitalize" data-testid="welcome-page">
-          Welcome to React Next Base
+          Welcome to Chatter AI App
         </Title>
       </PageContent>
     </DefaultTemplate>

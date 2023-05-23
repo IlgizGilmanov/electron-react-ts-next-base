@@ -1,6 +1,6 @@
 {
-  "name": "electron-react-ts-next-base",
-  "description": "Base project with electron",
+  "name": "chatter-ai-app",
+  "description": "Chatter AI App",
   "version": "1.0.0",
   "private": true,
   "main": "electron/main.ts",

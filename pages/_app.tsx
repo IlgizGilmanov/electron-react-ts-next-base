@@ -26,7 +26,7 @@ const MyApp: TAppPage = ({ Component, pageProps, router, accessTokenManager, apo
     <CurrentUserProvider>
       <NotifierProvider>
         <Head>
-          <title>React ts next base</title>
+          <title>Chatter AI App</title>
         </Head>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
