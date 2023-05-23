@@ -36,5 +36,5 @@
     "**/*.tsx",
     "**/*.ts"
   ],
-  "exclude": ["node_modules", "server/*", "server.ts", "electron/*"]
+  "exclude": ["node_modules", "server/*", "server.ts", "electron/*", "out/*"]
 }

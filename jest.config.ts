@@ -10,6 +10,7 @@ const config: Config = {
   testPathIgnorePatterns: [
     '<rootDir>/.next/',
     '<rootDir>/node_modules/',
+    '<rootDir>/out/',
     '<rootDir>/__tests__/helpers',
     '<rootDir>/__tests__/mocks',
   ],
