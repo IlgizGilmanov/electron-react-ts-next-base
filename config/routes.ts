@@ -7,5 +7,5 @@ export const SIGNIN = '/signin';
 export const SIGNUP = '/signup';
 export const RECOVERY_PASSWORD = '/recovery-password';
 
-export const ASSISTANT = '/assistant';
+export const ASSISTANT = HOME;
 export const SETTINGS = '/settings';
