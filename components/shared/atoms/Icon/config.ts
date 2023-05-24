@@ -9,6 +9,7 @@ export const configIcons = {
   plus: icons.Plus,
   minus: icons.Minus,
   activity: icons.Activity,
+  history: icons.History,
   settings: icons.Settings,
 };
 export type IconKeys = keyof typeof configIcons;

@@ -9,3 +9,4 @@ export const RECOVERY_PASSWORD = '/recovery-password';
 
 export const ASSISTANT = HOME;
 export const SETTINGS = '/settings';
+export const HISTORY = '/history';

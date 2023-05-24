@@ -6,6 +6,7 @@ import ArrowChevronRight from './arrow-chevron-right.svg';
 import Plus from './plus.svg';
 import Minus from './minus.svg';
 import Activity from './activity.svg';
+import History from './history.svg';
 import Settings from './settings.svg';
 
 export {
@@ -17,5 +18,6 @@ export {
   Plus,
   Minus,
   Activity,
+  History,
   Settings,
 };
