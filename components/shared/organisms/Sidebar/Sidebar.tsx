@@ -1,10 +1,8 @@
-import Link from 'next/link';
-
 import { ASSISTANT, HISTORY, SETTINGS } from 'config/routes';
-import Icon from 'components/shared/atoms/Icon';
 
-import { SidebarWrapper, Tabs, TabItem } from './styled';
-import { TSidebar, TTabItem } from './types';
+import Tabs, { TTabItem } from './Tabs';
+import { SidebarWrapper } from './styled';
+import { TSidebar } from './types';
 
 const Sidebar = ({ user }: TSidebar) => {
   const tabs: TTabItem[] = [
@@ -17,16 +15,7 @@ const Sidebar = ({ user }: TSidebar) => {
     <>
       {!!user && (
         <SidebarWrapper>
-          <Tabs data-testid="sidebar-tabs">
-            {tabs.map(({ text, url, iconName, testId }) => (
-              <TabItem key={text} data-testid={testId}>
-                <Link href={url} passHref>
-                  <Icon name={iconName} $color="black" $size={20} />
-                  <span>{text}</span>
-                </Link>
-              </TabItem>
-            ))}
-          </Tabs>
+          <Tabs tabs={tabs} />
           {/* Subscription info */}
           {/* User account dropdown */}
         </SidebarWrapper>
