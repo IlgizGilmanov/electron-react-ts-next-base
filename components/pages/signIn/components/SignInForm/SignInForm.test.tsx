@@ -34,6 +34,8 @@ describe('SignInForm', () => {
     const inputEmail = screen.getByTestId('input-email');
     const inputPassword = screen.getByTestId('input-password');
 
+    await user.clear(inputEmail);
+    await user.clear(inputPassword);
     await user.type(inputEmail, inputEmailValue);
     await user.type(inputPassword, inputPasswordValue);
 

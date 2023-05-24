@@ -8,5 +8,7 @@ export const configIcons = {
   eye: icons.Eye,
   plus: icons.Plus,
   minus: icons.Minus,
+  activity: icons.Activity,
+  settings: icons.Settings,
 };
 export type IconKeys = keyof typeof configIcons;

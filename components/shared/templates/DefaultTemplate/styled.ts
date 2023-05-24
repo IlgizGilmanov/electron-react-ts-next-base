@@ -2,9 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  align-items: center;
+  min-width: 600px;
 `;
 
 export const PageContent = styled.div(
