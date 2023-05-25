@@ -2,17 +2,17 @@ import { useMemo } from 'react';
 import { FloatingFocusManager, FloatingList } from '@floating-ui/react';
 
 import Icon from 'components/shared/atoms/Icon';
-import { TDropdownMenuList } from './types';
+import { TDropdownMenu } from './types';
 import ListItem from './ListItem';
 import { StyledList, StyledReference } from './styled';
-import useDropdownMenuList from './useDropdownMenuList';
+import useDropdownMenu from './useDropdownMenu';
 
-const DropdownMenuList = ({
+const DropdownMenu = ({
   defaultLabel,
   menuItems: initialMenuItems,
   selectedIndex,
   onSelect,
-}: TDropdownMenuList) => {
+}: TDropdownMenu) => {
   const menuItems = useMemo(() => ['Default', ...initialMenuItems], [initialMenuItems]);
 
   const {
@@ -28,7 +28,7 @@ const DropdownMenuList = ({
     elementsRef,
     labelsRef,
     handleSelect,
-  } = useDropdownMenuList({
+  } = useDropdownMenu({
     selectedIndex,
     defaultLabel,
     onSelect,
@@ -62,4 +62,4 @@ const DropdownMenuList = ({
   );
 };
 
-export default DropdownMenuList;
+export default DropdownMenu;

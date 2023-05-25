@@ -12,15 +12,15 @@ import {
   useRole,
   useTypeahead,
 } from '@floating-ui/react';
-import { TDropdownMenuList } from './types';
+import { TDropdownMenu } from './types';
 
-export type TUseDropdownMenuList = {
-  selectedIndex: TDropdownMenuList['selectedIndex'];
-  defaultLabel: TDropdownMenuList['defaultLabel'];
-  onSelect: TDropdownMenuList['onSelect'];
+export type TUseDropdownMenu = {
+  selectedIndex: TDropdownMenu['selectedIndex'];
+  defaultLabel: TDropdownMenu['defaultLabel'];
+  onSelect: TDropdownMenu['onSelect'];
 };
 
-const useDropdownMenuList = ({ selectedIndex, defaultLabel, onSelect }: TUseDropdownMenuList) => {
+const useDropdownMenu = ({ selectedIndex, defaultLabel, onSelect }: TUseDropdownMenu) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const [selectedLabel, setSelectedLabel] = useState<string | null>(null);
@@ -98,4 +98,4 @@ const useDropdownMenuList = ({ selectedIndex, defaultLabel, onSelect }: TUseDrop
   };
 };
 
-export default useDropdownMenuList;
+export default useDropdownMenu;

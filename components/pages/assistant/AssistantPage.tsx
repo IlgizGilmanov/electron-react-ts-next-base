@@ -6,7 +6,7 @@ import withGetDataFromTree from 'lib/apollo/withGetDataFromTree';
 import { TNextPage } from 'lib/apollo/types';
 import DefaultTemplate from 'components/shared/templates/DefaultTemplate';
 import PageHeader from 'components/shared/molecules/PageHeader';
-import DropdownMenuList from 'components/shared/molecules/DropdownMenuList';
+import DropdownMenu from 'components/shared/molecules/DropdownMenu';
 import { Wrapper, Content } from './styled';
 
 const toneOfVoiceItems = [
@@ -56,13 +56,13 @@ export const AssistantPage: TNextPage = () => {
     <DefaultTemplate>
       <Wrapper>
         <PageHeader title="AI Assistant">
-          <DropdownMenuList
+          <DropdownMenu
             defaultLabel="Tone of voice"
             menuItems={toneOfVoiceItems}
             selectedIndex={selectedToneOfVoiceIndex}
             onSelect={handleToneOfVoiceSelect}
           />
-          <DropdownMenuList
+          <DropdownMenu
             defaultLabel="Speech style"
             menuItems={speechStyleItems}
             selectedIndex={selectedSpeechStyleIndex}

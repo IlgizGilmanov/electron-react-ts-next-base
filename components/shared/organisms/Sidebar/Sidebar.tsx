@@ -17,7 +17,7 @@ const Sidebar = ({ user }: TSidebar) => {
         <SidebarWrapper>
           <Tabs tabs={tabs} />
           {/* Subscription info */}
-          {/* User account dropdown */}
+          User account dropdown
         </SidebarWrapper>
       )}
     </>

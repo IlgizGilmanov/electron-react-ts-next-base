@@ -1,4 +1,4 @@
-export type TDropdownMenuList = {
+export type TDropdownMenu = {
   defaultLabel: string;
   menuItems: string[];
   selectedIndex: number | null;
