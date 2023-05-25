@@ -17,7 +17,7 @@ import { TDropdownMenu } from './types';
 export type TUseDropdownMenu = {
   selectedIndex: TDropdownMenu['selectedIndex'];
   defaultLabel: TDropdownMenu['defaultLabel'];
-  onSelect: TDropdownMenu['onSelect'];
+  onSelect?: TDropdownMenu['onSelect'];
 };
 
 const useDropdownMenu = ({ selectedIndex, defaultLabel, onSelect }: TUseDropdownMenu) => {

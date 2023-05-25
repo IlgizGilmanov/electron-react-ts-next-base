@@ -1,6 +1,6 @@
 import { CurrentUserFragment } from 'graphql/fragments/__generated__/currentUserInfo.generated';
 
-export type TSidebar = {
-  user?: CurrentUserFragment | null;
+export type TAccountDropdown = {
+  user: CurrentUserFragment;
   signOut: () => Promise<void>;
 };
