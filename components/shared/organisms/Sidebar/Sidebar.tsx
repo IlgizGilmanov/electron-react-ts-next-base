@@ -4,13 +4,13 @@ import Tabs, { TTabItem } from './Tabs';
 import { SidebarWrapper } from './styled';
 import { TSidebar } from './types';
 
-const Sidebar = ({ user }: TSidebar) => {
-  const tabs: TTabItem[] = [
-    { text: 'Assistant', url: ASSISTANT, iconName: 'activity', testId: 'assistant' },
-    { text: 'History', url: HISTORY, iconName: 'history', testId: 'history' },
-    { text: 'Settings', url: SETTINGS, iconName: 'settings', testId: 'settings' },
-  ];
+const tabs: TTabItem[] = [
+  { text: 'Assistant', url: ASSISTANT, iconName: 'activity', testId: 'assistant' },
+  { text: 'History', url: HISTORY, iconName: 'history', testId: 'history' },
+  { text: 'Settings', url: SETTINGS, iconName: 'settings', testId: 'settings' },
+];
 
+const Sidebar = ({ user }: TSidebar) => {
   return (
     <>
       {!!user && (
