@@ -1,19 +1,47 @@
+import { useState } from 'react';
+
 import withAuth from 'lib/auth/withAuth';
 import withAuthSecurity from 'lib/auth/withAuthSecurity';
 import withGetDataFromTree from 'lib/apollo/withGetDataFromTree';
 import { TNextPage } from 'lib/apollo/types';
-
 import DefaultTemplate from 'components/shared/templates/DefaultTemplate';
 import PageHeader from 'components/shared/molecules/PageHeader';
-
+import DropdownMenuList from 'components/shared/molecules/DropdownMenuList';
 import { Wrapper, Content } from './styled';
 
+const toneOfVoiceItems = [
+  'Clinical',
+  'Authoritative',
+  'Cold',
+  'Confident',
+  'Cynical',
+  'Emotional',
+  'Empathetic',
+  'Formal',
+  'Informal',
+  'Friendly',
+  'Humorous',
+];
+
 export const AssistantPage: TNextPage = () => {
+  const [selectedToneOfVoiceIndex, setSelectedToneOfVoiceIndex] = useState<number | null>(0);
+
+  const handleToneOfVoiceSelect = (selectedIndex: number | null) => {
+    setSelectedToneOfVoiceIndex(selectedIndex);
+    // eslint-disable-next-line no-console
+    console.log('Selected index:', selectedIndex);
+  };
+
   return (
     <DefaultTemplate>
       <Wrapper>
         <PageHeader title="AI Assistant">
-          <div>Tone of voice</div>
+          <DropdownMenuList
+            defaultLabel="Tone of voice"
+            menuItems={toneOfVoiceItems}
+            selectedIndex={selectedToneOfVoiceIndex}
+            onSelect={handleToneOfVoiceSelect}
+          />
         </PageHeader>
         <Content>AI Assistant page content</Content>
       </Wrapper>

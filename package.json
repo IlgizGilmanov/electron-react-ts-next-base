@@ -40,6 +40,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.1",
     "@ebay/nice-modal-react": "^1.2.7",
+    "@floating-ui/react": "^0.24.1",
     "@graphql-tools/jest-transform": "^1.2.1",
     "@next/bundle-analyzer": "^12.2.5",
     "ally.js": "^1.4.1",
