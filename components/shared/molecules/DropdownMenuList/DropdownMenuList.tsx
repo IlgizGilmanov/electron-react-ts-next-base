@@ -7,7 +7,7 @@ import ListItem from './ListItem';
 import { StyledList, StyledReference } from './styled';
 import useDropdownMenuList from './useDropdownMenuList';
 
-const DropdownMenu = ({
+const DropdownMenuList = ({
   defaultLabel,
   menuItems: initialMenuItems,
   selectedIndex,
@@ -46,6 +46,7 @@ const DropdownMenu = ({
             <FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
               {menuItems.map(item => (
                 <ListItem
+                  key={`list-item-${item}`}
                   label={item}
                   activeIndex={activeIndex}
                   selectedIndex={selectedIndex}
@@ -61,4 +62,4 @@ const DropdownMenu = ({
   );
 };
 
-export default DropdownMenu;
+export default DropdownMenuList;
