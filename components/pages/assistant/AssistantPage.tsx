@@ -23,13 +23,33 @@ const toneOfVoiceItems = [
   'Humorous',
 ];
 
+const speechStyleItems = [
+  'Academic',
+  'Analytical',
+  'Argumentative',
+  'Controversial',
+  'Creative',
+  'Critical',
+  'Descriptive',
+  'Informative',
+  'Journalistic',
+  'Persuasive',
+];
+
 export const AssistantPage: TNextPage = () => {
   const [selectedToneOfVoiceIndex, setSelectedToneOfVoiceIndex] = useState<number | null>(0);
+  const [selectedSpeechStyleIndex, setSelectedSpeechStyleIndex] = useState<number | null>(0);
 
   const handleToneOfVoiceSelect = (selectedIndex: number | null) => {
     setSelectedToneOfVoiceIndex(selectedIndex);
     // eslint-disable-next-line no-console
-    console.log('Selected index:', selectedIndex);
+    console.log('Selected Tone of voice index:', selectedIndex);
+  };
+
+  const handleSpeechStyleSelect = (selectedIndex: number | null) => {
+    setSelectedSpeechStyleIndex(selectedIndex);
+    // eslint-disable-next-line no-console
+    console.log('Selected Speech style index:', selectedIndex);
   };
 
   return (
@@ -41,6 +61,12 @@ export const AssistantPage: TNextPage = () => {
             menuItems={toneOfVoiceItems}
             selectedIndex={selectedToneOfVoiceIndex}
             onSelect={handleToneOfVoiceSelect}
+          />
+          <DropdownMenuList
+            defaultLabel="Speech style"
+            menuItems={speechStyleItems}
+            selectedIndex={selectedSpeechStyleIndex}
+            onSelect={handleSpeechStyleSelect}
           />
         </PageHeader>
         <Content>AI Assistant page content</Content>
