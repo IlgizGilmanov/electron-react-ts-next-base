@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: calc(var(--vh) * 100);
     margin: 0;
     padding: 0;
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'IBMPlexSans', sans-serif;
   }
 
   :focus {
@@ -32,12 +32,12 @@ const GlobalStyle = createGlobalStyle`
 
   input,
   textarea {
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'IBMPlexSans', sans-serif;
   }
 
   a, button {
     cursor: pointer;
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'IBMPlexSans', sans-serif;
   }
 
   a {

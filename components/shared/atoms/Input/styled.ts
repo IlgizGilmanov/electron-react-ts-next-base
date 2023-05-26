@@ -22,7 +22,7 @@ export const FieldWrapper = styled.div(
     input,
     textarea {
       font-size: 0.875rem;
-      font-family: 'Gilroy', sans-serif;
+      font-family: 'IBMPlexSans', sans-serif;
       color: ${textColor};
       width: 100%;
       height: 100%;

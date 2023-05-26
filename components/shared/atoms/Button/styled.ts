@@ -27,7 +27,7 @@ export const StyledButton = styled.button(
     text-align: center;
     font-size: 0.875rem;
     cursor: pointer;
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'IBMPlexSans', sans-serif;
     font-weight: 600;
 
     width: ${$width};
