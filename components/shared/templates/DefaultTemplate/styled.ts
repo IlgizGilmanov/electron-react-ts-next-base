@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
 export const PageContent = styled.div(
   ({ theme: { down, breakpoints } }) =>
     css`
-      padding: 0 1.5rem;
       width: 100%;
       max-width: ${breakpoints.xl};
 

@@ -39,11 +39,9 @@ export type InputWrapperProps = {
 
 export type FieldWrapperProps = TMargin &
   TWidth & {
-    inputHeight: string;
     backgroundColor: string;
     textAlign: `${ETextAlign}`;
     textColor: string;
-    type: string;
   };
 
 export type TBorderStates = {

@@ -28,7 +28,7 @@ export const StyledButton = styled.button(
     font-size: 0.875rem;
     cursor: pointer;
     font-family: 'IBMPlexSans', sans-serif;
-    font-weight: 600;
+    font-weight: 300;
 
     width: ${$width};
     height: ${$size.height};

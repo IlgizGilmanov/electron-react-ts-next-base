@@ -3,14 +3,13 @@ import type { FormikValues } from 'formik';
 import { Form as FormikForm, Formik } from 'formik';
 
 import { TWidth } from 'public/styles/config/width';
+import Input from 'components/shared/atoms/Input';
 
 import { collectFormikProps } from './utils';
 
 import {
   SelectFormField,
   CheckboxFormField,
-  TextFormField,
-  PasswordFormField,
   TextareaFormField,
   FileFormField,
   SubmitButton,
@@ -24,15 +23,17 @@ import { ErrorWrapper, FormContainer, FormWrapper, FieldWrapper } from './styled
 const Form = <FormValues extends FormikValues = FormikValues>({
   form,
   $width = 'auto',
+  testId = 'base-form',
 }: TWidth & {
   form: FormType<FormValues>;
+  testId?: string;
 }) => {
   const { fields, onSubmit } = form;
   const { initialValues, validationSchema } = collectFormikProps<FormValues>(fields);
   const formValidationSchema = Yup.object().shape(validationSchema);
 
   return (
-    <FormWrapper data-testid="profile-update-form" $width={$width}>
+    <FormWrapper data-testid={testId} $width={$width}>
       <Formik<FormValues>
         enableReinitialize
         onSubmit={onSubmit}
@@ -63,17 +64,8 @@ const Form = <FormValues extends FormikValues = FormikValues>({
                         </DefaultFieldWrapper>
                       );
                     case FormFieldType.text:
-                      return (
-                        <DefaultFieldWrapper key={name} name={name} title={title}>
-                          <TextFormField {...fieldConfig} isSubmitting={isSubmitting} />
-                        </DefaultFieldWrapper>
-                      );
                     case FormFieldType.password:
-                      return (
-                        <DefaultFieldWrapper key={name} name={name} title={title}>
-                          <PasswordFormField {...fieldConfig} isSubmitting={isSubmitting} />
-                        </DefaultFieldWrapper>
-                      );
+                      return <Input key={name} {...fieldConfig} rounded />;
                     case FormFieldType.textarea:
                       return (
                         <DefaultFieldWrapper key={name} name={name} title={title}>

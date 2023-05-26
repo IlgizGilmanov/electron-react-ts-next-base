@@ -5,13 +5,7 @@ import Icon from 'components/shared/atoms/Icon';
 import Button from 'components/shared/atoms/Button';
 
 import { TInput } from './types';
-import {
-  borderConfig,
-  backgroundColorConfig,
-  marginConfig,
-  heightConfig,
-  colorConfig,
-} from './config';
+import { borderConfig, backgroundColorConfig, marginConfig, colorConfig } from './config';
 
 import { FieldWrapper, InputWrapper, ErrorWrapper, FieldLabel } from './styled';
 
@@ -33,7 +27,14 @@ const Input: FC<TInputType> = ({
   autoComplete,
   ...props
 }) => {
-  const { $mb = marginConfig[variant], $ml, $mr, $mt, ...fieldProps } = props;
+  const { $mb = marginConfig[variant], $ml, $mr, $mt, ...otherProps } = props;
+  // TODO: remove this after correct implementation of form based on Input atom
+  const fieldProps = Object.fromEntries(
+    Object.entries(otherProps).filter(
+      ([key]) => key !== 'initialValue' && key !== 'validationSchema',
+    ),
+  );
+
   const { isSubmitting } = useFormikContext();
   const [_, meta] = useField(name);
   const { value, error, touched } = meta;
@@ -48,11 +49,9 @@ const Input: FC<TInputType> = ({
   return (
     <FieldWrapper
       $width={$width}
-      inputHeight={heightConfig[variant]}
       backgroundColor={backgroundColorConfig[variant]}
       textAlign={textAlign}
       textColor={colorConfig[variant]}
-      type={type}
       $mb={$mb}
       $ml={$ml}
       $mr={$mr}

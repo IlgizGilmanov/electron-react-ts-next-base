@@ -5,11 +5,11 @@ import { getMarginStyles } from 'public/styles/config/margin';
 import { configColors } from 'public/styles/config/colors';
 import { TStyledLinkProps } from './types';
 
-const linkStyles = ({ $size, $color, $bold, ...props }: TStyledLinkProps) => css`
+const linkStyles = ({ $size, $color, $weight, ...props }: TStyledLinkProps) => css`
   text-decoration: none;
   font-size: ${$size}px;
   color: ${configColors[$color]};
-  font-weight: ${$bold ? 'bold' : 'normal'};
+  font-weight: ${$weight || 'normal'};
 
   &:hover {
     text-decoration: underline;

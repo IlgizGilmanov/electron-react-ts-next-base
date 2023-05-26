@@ -3,9 +3,9 @@ import { TVariantConfig, TSizeConfig, TIconConfig, TShapeConfig } from './types'
 
 export const backgroundConfig: TVariantConfig = {
   primary: {
-    default: theme.colors.blue_500,
-    hover: theme.colors.blue_400,
-    focused: theme.colors.blue_500,
+    default: theme.colors.primary,
+    hover: theme.colors.purple_900,
+    focused: theme.colors.primary,
   },
   alert: {
     default: theme.colors.red_500,

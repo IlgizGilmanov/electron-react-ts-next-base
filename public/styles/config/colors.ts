@@ -34,11 +34,24 @@ export type ColorIntensity = typeof colorIntensities[number];
 
 type RegularColors = `${ColorShades}_${ColorIntensity}`;
 
-export type ColorKeys = 'black' | 'white' | 'transparent' | RegularColors;
+type CustomColors =
+  | 'primary'
+  | 'primaryText'
+  | 'secondaryText'
+  | 'inputPlaceholder'
+  | 'inputBorder';
+
+export type ColorKeys = 'black' | 'white' | 'transparent' | RegularColors | CustomColors;
 
 type Colors = { [key in ColorKeys]: Property.Color };
 
 export const configColors: Colors = {
+  primary: '#6417C4',
+  primaryText: '#0A090B',
+  secondaryText: '#4F4D55',
+  inputPlaceholder: '#7F7D83',
+  inputBorder: '#E6E6E6',
+
   black: '#111827',
   white: '#FFFFFF',
   transparent: 'transparent',

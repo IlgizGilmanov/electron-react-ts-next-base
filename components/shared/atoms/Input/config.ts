@@ -4,8 +4,8 @@ import { TVariantConfig, TBorderConfig, TMarginConfig } from './types';
 
 export const borderConfig: TBorderConfig = {
   default: {
-    default: `border: 1px solid ${theme.colors.grey_200}`,
-    error: `border: 1px solid ${theme.colors.grey_200}`,
+    default: `border: 1px solid ${theme.colors.inputBorder}`,
+    error: `border: 1px solid ${theme.colors.inputBorder}`,
   },
   secondary: {
     default: `border: 1px solid ${theme.colors.white}`,
@@ -23,12 +23,7 @@ export const marginConfig: TMarginConfig = {
   secondary: 20,
 };
 
-export const heightConfig: TVariantConfig = {
-  default: '2.5rem',
-  secondary: '2.5rem',
-};
-
 export const colorConfig: TVariantConfig = {
-  default: theme.colors.black,
+  default: theme.colors.primaryText,
   secondary: theme.colors.white,
 };

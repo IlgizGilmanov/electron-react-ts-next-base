@@ -7,7 +7,7 @@ export type TActionLink = TMargin & {
   onClick?: () => void;
   label?: string;
   $size?: number;
-  bold?: boolean;
+  $weight?: number;
   children?: ReactNode;
   $color?: ColorKeys;
   href?: UrlObject | string;
@@ -17,7 +17,7 @@ export type TActionLink = TMargin & {
 
 export type TStyledLinkProps = TMargin & {
   $size: number;
-  $bold?: boolean;
+  $weight?: number;
   $color: ColorKeys;
   href?: UrlObject | string;
 };

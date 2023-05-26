@@ -100,7 +100,7 @@ const ProfileFormContent: FC<TProfileFormContent> = ({
           <AvatarImg src={avatarSrc} />
         </AvatarWrapper>
       )}
-      <Form form={form} />
+      <Form form={form} testId="profile-update-form" />
     </FormWrapper>
   );
 };

@@ -43,17 +43,17 @@ export const AssistantPage: TNextPage = () => {
   const handleToneOfVoiceSelect = (selectedIndex: number | null) => {
     setSelectedToneOfVoiceIndex(selectedIndex);
     // eslint-disable-next-line no-console
-    console.log('Selected Tone of voice index:', selectedIndex);
+    // console.log('Selected Tone of voice index:', selectedIndex);
   };
 
   const handleSpeechStyleSelect = (selectedIndex: number | null) => {
     setSelectedSpeechStyleIndex(selectedIndex);
     // eslint-disable-next-line no-console
-    console.log('Selected Speech style index:', selectedIndex);
+    // console.log('Selected Speech style index:', selectedIndex);
   };
 
   return (
-    <DefaultTemplate>
+    <DefaultTemplate testId="assistant-page">
       <Wrapper>
         <PageHeader title="AI Assistant">
           <DropdownMenu

@@ -5,35 +5,27 @@ import { getMarginStyles } from 'public/styles/config/margin';
 import { FieldWrapperProps, InputWrapperProps } from './types';
 
 export const FieldWrapper = styled.div(
-  ({
-    $width,
-    inputHeight,
-    type,
-    backgroundColor,
-    textAlign,
-    textColor,
-    ...props
-  }: FieldWrapperProps) => css`
+  ({ $width, backgroundColor, textAlign, textColor, ...props }: FieldWrapperProps) => css`
     position: relative;
     width: ${$width};
-    height: ${type !== 'textarea' && inputHeight};
     ${getMarginStyles(props)}
 
     input,
     textarea {
       font-size: 0.875rem;
+      line-height: 1.25rem;
       font-family: 'IBMPlexSans', sans-serif;
       color: ${textColor};
       width: 100%;
       height: 100%;
       margin: 0;
-      padding: 0.625rem 1rem;
+      padding: 0.625rem 0.75rem;
       background-color: ${backgroundColor};
       text-align: ${textAlign};
       border: 0;
 
       ::placeholder {
-        color: ${theme.colors.grey_300};
+        color: ${theme.colors.inputPlaceholder};
       }
 
       :disabled {
@@ -76,7 +68,7 @@ export const InputWrapper = styled.div(
     cursor: ${disabled && 'not-allowed'};
     height: 100%;
 
-    border-radius: ${rounded && '0.375rem'};
+    border-radius: ${rounded && '0.5rem'};
     ${border};
   `,
 );

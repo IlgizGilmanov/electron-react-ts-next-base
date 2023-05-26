@@ -6,17 +6,6 @@ export const FormWrapper = styled.div<TWidth>(
   ({ $width }) => css`
     width: ${$width};
 
-    input,
-    textarea,
-    select,
-    button {
-      width: 100%;
-      padding: 1rem;
-      font-size: 1rem;
-      border-radius: 0.3rem;
-      border: 1px solid ${({ theme }) => theme.colors.grey_500};
-    }
-
     [type='file'] {
       border: none;
       padding: 0;
@@ -40,8 +29,18 @@ export const FormContainer = styled.div`
 
 export const FieldWrapper = styled.div`
   position: relative;
-  padding-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+
+  /* input,
+  textarea,
+  select,
+  button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid ${({ theme }) => theme.colors.grey_500};
+  } */
 `;
 
 export const FieldLabel = styled.label`

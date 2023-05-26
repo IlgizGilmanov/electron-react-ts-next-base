@@ -6,10 +6,10 @@ import { StyledNextLink, StyledLink } from './styled';
 const ActionLink: FC<TActionLink> = ({
   onClick,
   label,
-  $size = 16,
+  $size = 14,
+  $weight,
   children,
-  $color = 'blue_600',
-  bold = false,
+  $color = 'primary',
   href,
   ...props
 }) => {
@@ -19,7 +19,7 @@ const ActionLink: FC<TActionLink> = ({
         $color={$color}
         onClick={onClick}
         $size={$size}
-        $bold={bold}
+        $weight={$weight}
         href={href}
         passHref
         {...props}
@@ -29,7 +29,7 @@ const ActionLink: FC<TActionLink> = ({
       </StyledNextLink>
     );
   return (
-    <StyledLink $color={$color} onClick={onClick} $size={$size} $bold={bold} {...props}>
+    <StyledLink $color={$color} onClick={onClick} $size={$size} $weight={$weight} {...props}>
       {label} {children}
     </StyledLink>
   );
