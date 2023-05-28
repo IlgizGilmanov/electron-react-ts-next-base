@@ -4,6 +4,7 @@ import withAuth from 'lib/auth/withAuth';
 import withNotAuthSecurity from 'lib/auth/withNotAuthSecurity';
 import withGetDataFromTree from 'lib/apollo/withGetDataFromTree';
 import { TNextPage } from 'lib/apollo/types';
+import useCurrentUser from 'hooks/useCurrentUser';
 import { SIGNUP } from 'config/routes';
 import DefaultTemplate from 'components/shared/templates/DefaultTemplate';
 import ActionLink from 'components/shared/atoms/ActionLink';
@@ -28,23 +29,26 @@ const SignInPage: TNextPage = () => {
     };
     callback();
   });
+  const { user } = useCurrentUser();
 
   return (
     <DefaultTemplate testId="signin-page">
-      <PageContentWrapper>
-        <FormContentWrapper>
-          <FormContent>
-            <Title>Login to account</Title>
-            <Subtitle>Enter your credentials to access your account</Subtitle>
-            <SignInForm />
-            <p>
-              <NotMember>Not a member?</NotMember>
-              <ActionLink href={SIGNUP} label="Create account" $weight={500} />
-            </p>
-          </FormContent>
-        </FormContentWrapper>
-        <ImageWrapper />
-      </PageContentWrapper>
+      {!user && (
+        <PageContentWrapper>
+          <FormContentWrapper>
+            <FormContent>
+              <Title>Login to account</Title>
+              <Subtitle>Enter your credentials to access your account</Subtitle>
+              <SignInForm />
+              <p>
+                <NotMember>Not a member?</NotMember>
+                <ActionLink href={SIGNUP} label="Create account" $weight={500} />
+              </p>
+            </FormContent>
+          </FormContentWrapper>
+          <ImageWrapper />
+        </PageContentWrapper>
+      )}
     </DefaultTemplate>
   );
 };
