@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import * as Yup from 'yup';
 
 import { useSignIn } from 'lib/apollo/hooks/actions/auth';
@@ -11,13 +12,15 @@ import {
 import { RECOVERY_PASSWORD } from 'config/routes';
 import { PASSWORD_REGULAR_EXP } from 'config/constants/regularExpressions';
 
+import Checkbox from 'components/shared/atoms/Checkbox';
 import ActionLink from 'components/shared/atoms/ActionLink';
 import Form, { FormFieldType } from 'components/shared/molecules/Form';
 
 import { TFormValues } from './types';
-import { Wrapper } from './styled';
+import { ActionsWrapper } from './styled';
 
 const SignInForm = () => {
+  const [rememberMe, setRememberMe] = useState(false);
   const [signIn] = useSignIn();
 
   const form = {
@@ -53,10 +56,18 @@ const SignInForm = () => {
   };
 
   return (
-    <Wrapper>
+    <>
       <Form form={form} $width="100%" />
-      <ActionLink href={RECOVERY_PASSWORD} label="Forgot?" $weight={500} />
-    </Wrapper>
+      <ActionsWrapper>
+        <Checkbox
+          label="Remember me"
+          name="remember-me-checkbox"
+          onChange={() => setRememberMe(prevValue => !prevValue)}
+          checked={rememberMe}
+        />
+        <ActionLink href={RECOVERY_PASSWORD} label="Forgot?" $weight={500} />
+      </ActionsWrapper>
+    </>
   );
 };
 

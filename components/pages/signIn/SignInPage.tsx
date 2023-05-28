@@ -38,7 +38,7 @@ const SignInPage: TNextPage = () => {
           <FormContentWrapper>
             <FormContent>
               <Title>Login to account</Title>
-              <Subtitle>Enter your credentials to access your account</Subtitle>
+              <Subtitle>Enter your credentials to use ChatterAI</Subtitle>
               <SignInForm />
               <p>
                 <NotMember>Not a member?</NotMember>

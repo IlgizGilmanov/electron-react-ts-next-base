@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const ActionsWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
 `;
