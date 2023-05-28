@@ -43,6 +43,7 @@ export const NotMember = styled.span(
 export const ImageWrapper = styled.div`
   flex: 1 1 50%;
   background-image: url('/images/auth-bg.png');
+  background-color: #9babdb; // average image color
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
