@@ -1,8 +1,9 @@
 import { ASSISTANT, HISTORY, SETTINGS } from 'config/routes';
 
-import Tabs, { TTabGroup } from './Tabs';
 import AccountDropdown from './AccountDropdown';
 import SidebarHeader from './SidebarHeader';
+import Tabs, { TTabGroup } from './Tabs';
+
 import { SidebarWrapper } from './styled';
 import { TSidebar } from './types';
 

@@ -1,2 +1,2 @@
 export { default } from './AuthTemplate';
-export { AuthTitle, AuthSubtitle, AuthRegularText } from './styled';
+export { AuthRegularText, AuthSubtitle, AuthTitle } from './styled';

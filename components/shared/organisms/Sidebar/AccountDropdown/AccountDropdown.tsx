@@ -1,18 +1,19 @@
 import { FloatingFocusManager, FloatingList } from '@floating-ui/react';
 
-import { useDropdownMenu } from 'components/shared/molecules/DropdownMenu';
 import ProfileImage from 'components/shared/atoms/ProfileImage';
+import { useDropdownMenu } from 'components/shared/molecules/DropdownMenu';
 
 import MenuList from './MenuList';
-import { TAccountDropdown } from './types';
+
 import {
-  StyledReference,
   AvatarWrapper,
+  StyledList,
+  StyledReference,
+  UserEmail,
   UserInfo,
   UserName,
-  UserEmail,
-  StyledList,
 } from './styled';
+import { TAccountDropdown } from './types';
 
 const AccountDropdown = ({ user, signOut }: TAccountDropdown) => {
   const {

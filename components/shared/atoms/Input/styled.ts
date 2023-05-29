@@ -1,27 +1,31 @@
 import styled, { css } from 'styled-components';
-import theme from 'public/styles/theme';
+
 import { getMarginStyles } from 'public/styles/config/margin';
+import theme from 'public/styles/theme';
 
 import { FieldWrapperProps, InputWrapperProps } from './types';
 
 export const FieldWrapper = styled.div(
   ({ $width, backgroundColor, textAlign, textColor, ...props }: FieldWrapperProps) => css`
     position: relative;
+
     width: ${$width};
     ${getMarginStyles(props)}
 
     input,
     textarea {
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      font-family: 'IBMPlexSans', sans-serif;
-      color: ${textColor};
       width: 100%;
       height: 100%;
-      margin: 0;
       padding: 0.625rem 0.75rem;
-      background-color: ${backgroundColor};
+      margin: 0;
+
+      font-family: IBMPlexSans, sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      color: ${textColor};
       text-align: ${textAlign};
+
+      background-color: ${backgroundColor};
       border: 0;
 
       ::placeholder {
@@ -29,18 +33,21 @@ export const FieldWrapper = styled.div(
       }
 
       :disabled {
-        background-color: ${theme.colors.grey_200};
         cursor: not-allowed;
+
+        background-color: ${theme.colors.grey_200};
       }
     }
 
     textarea {
       height: 6.25rem;
       min-height: 3.5rem;
+
       resize: vertical;
 
       -ms-overflow-style: none;
       scrollbar-width: none;
+
       &::-webkit-scrollbar {
         display: none;
       }
@@ -48,12 +55,13 @@ export const FieldWrapper = styled.div(
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
+      appearance: none;
+
       margin: 0;
     }
 
     input[type='number'] {
-      -moz-appearance: textfield;
+      appearance: textfield;
     }
   `,
 );
@@ -61,13 +69,15 @@ export const FieldWrapper = styled.div(
 export const InputWrapper = styled.div(
   ({ rounded, border, backgroundColor, disabled }: InputWrapperProps) => css`
     display: flex;
-    align-items: center;
     flex-wrap: nowrap;
-    overflow: hidden;
-    background-color: ${disabled ? theme.colors.grey_200 : backgroundColor};
-    cursor: ${disabled && 'not-allowed'};
-    height: 100%;
+    align-items: center;
 
+    height: 100%;
+    overflow: hidden;
+
+    cursor: ${disabled && 'not-allowed'};
+
+    background-color: ${disabled ? theme.colors.grey_200 : backgroundColor};
     border-radius: ${rounded && '0.5rem'};
     ${border};
   `,
@@ -75,12 +85,14 @@ export const InputWrapper = styled.div(
 
 export const ErrorWrapper = styled.div`
   position: absolute;
+
   width: 100%;
-  color: ${theme.colors.red_500};
-  font-size: 0.68rem;
   padding: 0.15rem 0 0 0.5rem;
-  white-space: nowrap;
+
+  font-size: 0.68rem;
+  color: ${theme.colors.red_500};
   text-align: end;
+  white-space: nowrap;
   direction: rtl;
 `;
 
@@ -89,12 +101,15 @@ export const FieldLabel = styled.label(
     position: absolute;
     top: 0;
     left: 0.35rem;
+    z-index: 1;
+
     height: 1px;
+    padding: 0 0.35rem;
+
     font-size: 0.7rem;
     line-height: 0;
-    background-color: ${theme.colors.white};
     color: ${theme.colors.grey_500};
-    padding: 0 0.35rem;
-    z-index: 1;
+
+    background-color: ${theme.colors.white};
   `,
 );

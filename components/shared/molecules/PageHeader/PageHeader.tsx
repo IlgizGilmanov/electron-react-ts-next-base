@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Wrapper, Title, Controls } from './styled';
+import { Controls, Title, Wrapper } from './styled';
 
 export type TPageHeader = {
   title: string;

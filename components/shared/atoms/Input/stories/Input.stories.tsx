@@ -1,5 +1,5 @@
-import * as Yup from 'yup';
 import withFormik from 'storybook-formik';
+import * as Yup from 'yup';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { REQUIRED_FIELD } from 'config/constants/errorsText';
@@ -51,8 +51,8 @@ export default {
     disabled: false,
     width: '100%',
     textAlign: 'left',
-    title: 'Заголовок',
-    placeholder: 'Плейсхолдер',
+    title: 'Title',
+    placeholder: 'Placeholder',
     iconType: 'none',
     type: 'text',
     name: inputName,

@@ -2,10 +2,12 @@ import { useMemo } from 'react';
 import { FloatingFocusManager, FloatingList } from '@floating-ui/react';
 
 import Icon from 'components/shared/atoms/Icon';
-import { TDropdownMenu } from './types';
+
 import ListItem from './ListItem';
-import { StyledList, StyledReference } from './styled';
 import useDropdownMenu from './useDropdownMenu';
+
+import { StyledList, StyledReference } from './styled';
+import { TDropdownMenu } from './types';
 
 const DropdownMenu = ({
   defaultLabel,

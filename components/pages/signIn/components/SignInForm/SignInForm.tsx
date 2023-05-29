@@ -3,21 +3,21 @@ import * as Yup from 'yup';
 
 import { useSignIn } from 'lib/apollo/hooks/actions/auth';
 
-import { DEFAULT_EMAIL, DEFAULT_PASSWORD } from 'config/vars';
 import {
   EMAIL_INVALID,
   PASSWORD_INVALID_FORMAT,
   PASSWORD_INVALID_LENGTH,
 } from 'config/constants/errorsText';
-import { RECOVERY_PASSWORD } from 'config/routes';
 import { PASSWORD_REGULAR_EXP } from 'config/constants/regularExpressions';
+import { RECOVERY_PASSWORD } from 'config/routes';
+import { DEFAULT_EMAIL, DEFAULT_PASSWORD } from 'config/vars';
 
-import Checkbox from 'components/shared/atoms/Checkbox';
 import ActionLink from 'components/shared/atoms/ActionLink';
+import Checkbox from 'components/shared/atoms/Checkbox';
 import Form, { FormFieldType } from 'components/shared/molecules/Form';
 
-import { TFormValues } from './types';
 import { ActionsWrapper } from './styled';
+import { TFormValues } from './types';
 
 const SignInForm = () => {
   const [rememberMe, setRememberMe] = useState(false);

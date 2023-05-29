@@ -1,5 +1,6 @@
 import { GraphQLError } from 'graphql';
 import { ApolloError } from '@apollo/client';
+
 import ErrorDecorator from './ErrorDecorator';
 
 describe('Error Decorator', () => {
@@ -62,7 +63,7 @@ describe('Error Decorator', () => {
     test('should return Something went wrong message', () => {
       // Arrange
       const mockErrorObject = { someKey: 'Wrong file path' };
-      const expectedError = new Error('Что-то пошло не так');
+      const expectedError = new Error('Something went wrong');
 
       // Act
       const actualError = new ErrorDecorator(mockErrorObject);

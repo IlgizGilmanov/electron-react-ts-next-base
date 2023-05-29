@@ -1,17 +1,20 @@
 import { useState } from 'react';
 
 import withAuth from 'lib/auth/withAuth';
-import withGetDataFromTree from 'lib/apollo/withGetDataFromTree';
 import withNotAuthSecurity from 'lib/auth/withNotAuthSecurity';
-import { TNextPage } from 'lib/apollo/types';
+import withGetDataFromTree from 'lib/apollo/withGetDataFromTree';
+
 import { SIGNIN } from 'config/routes';
-import AuthTemplate, { AuthSubtitle, AuthTitle } from 'components/shared/templates/AuthTemplate';
+import { TNextPage } from 'lib/apollo/types';
+
 import ActionLink from 'components/shared/atoms/ActionLink';
 import Icon from 'components/shared/atoms/Icon';
+import AuthTemplate, { AuthSubtitle, AuthTitle } from 'components/shared/templates/AuthTemplate';
 
+import ChooseNewPasswordForm from './components/ChooseNewPasswordForm';
 import RecoveryEmailForm from './components/RecoveryEmailForm';
 import VerifyEmailForm from './components/VerifyEmailForm';
-import ChooseNewPasswordForm from './components/ChooseNewPasswordForm';
+
 import { ActionLinkWrapper } from './styled';
 
 enum PasswordRecoverySteps {

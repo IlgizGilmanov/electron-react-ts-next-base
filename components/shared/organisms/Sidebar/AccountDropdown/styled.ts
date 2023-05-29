@@ -5,13 +5,16 @@ import { BaseStyledList } from 'components/shared/molecules/DropdownMenu';
 export const StyledReference = styled.div(
   ({ theme: { colors } }) => css`
     display: flex;
-    align-items: center;
     gap: 0.75rem;
+    align-items: center;
+
     padding: 0.625rem;
+
+    cursor: pointer;
+
     border: 1px solid ${colors.custom_grey_1};
     border-radius: 0.375rem;
-    cursor: pointer;
-    box-shadow: 0px 3px 4px -5px rgba(24, 24, 28, 0.03), 0px 1px 2px rgba(24, 24, 28, 0.04);
+    box-shadow: 0 3px 4px -5px rgb(24 24 28 / 3%), 0 1px 2px rgb(24 24 28 / 4%);
 
     &:hover,
     &:focus {
@@ -33,19 +36,19 @@ export const UserInfo = styled.div`
 
 export const UserName = styled.span(
   ({ theme: { colors } }) => css`
-    color: ${colors.primary_text};
     font-size: 0.875rem;
-    line-height: 1.25rem;
     font-weight: 500;
+    line-height: 1.25rem;
+    color: ${colors.primary_text};
   `,
 );
 
 export const UserEmail = styled.span(
   ({ theme: { colors } }) => css`
-    color: ${colors.secondary_text};
     font-size: 0.625rem;
-    line-height: 0.75rem;
     font-weight: 300;
+    line-height: 0.75rem;
+    color: ${colors.secondary_text};
   `,
 );
 

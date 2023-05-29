@@ -3,14 +3,16 @@ import { useEffect } from 'react';
 import withAuth from 'lib/auth/withAuth';
 import withNotAuthSecurity from 'lib/auth/withNotAuthSecurity';
 import withGetDataFromTree from 'lib/apollo/withGetDataFromTree';
-import { TNextPage } from 'lib/apollo/types';
+
 import { SIGNUP } from 'config/routes';
+import { TNextPage } from 'lib/apollo/types';
+
+import ActionLink from 'components/shared/atoms/ActionLink';
 import AuthTemplate, {
   AuthRegularText,
   AuthSubtitle,
   AuthTitle,
 } from 'components/shared/templates/AuthTemplate';
-import ActionLink from 'components/shared/atoms/ActionLink';
 
 import SignInForm from './components/SignInForm';
 

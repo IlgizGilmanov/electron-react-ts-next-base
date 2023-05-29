@@ -1,5 +1,6 @@
 import Icon from 'components/shared/atoms/Icon';
-import { Wrapper, LogoWrapper } from './styled';
+
+import { LogoWrapper, Wrapper } from './styled';
 
 const SidebarHeader = () => {
   return (

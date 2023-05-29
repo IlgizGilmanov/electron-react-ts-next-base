@@ -1,7 +1,8 @@
-import { useListItem } from '@floating-ui/react';
 import Router from 'next/router';
+import { useListItem } from '@floating-ui/react';
 
 import { SETTINGS } from 'config/routes';
+
 import { Option } from './styled';
 import { TMenuList } from './types';
 

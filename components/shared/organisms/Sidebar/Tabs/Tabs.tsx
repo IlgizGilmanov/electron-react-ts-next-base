@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import Icon from 'components/shared/atoms/Icon';
+
+import { TabGroup, TabGroupName, TabItem, Wrapper } from './styled';
 import { TTabs } from './types';
-import { Wrapper, TabItem, TabGroup, TabGroupName } from './styled';
 
 const Tabs = ({ tabGroups }: TTabs) => {
   const { pathname } = useRouter();

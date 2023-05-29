@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import * as Yup from 'yup';
 
-import useNotifier from 'hooks/useNotifier';
 import { usePasswordRecovery } from 'lib/apollo/hooks/actions/auth';
+import useNotifier from 'hooks/useNotifier';
+
 import { EMAIL_INVALID, REQUIRED_FIELD } from 'config/constants/errorsText';
+
 import Form, { FormFieldType } from 'components/shared/molecules/Form';
 
 import { TFormValues } from './types';

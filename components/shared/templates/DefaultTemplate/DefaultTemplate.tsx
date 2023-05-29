@@ -1,13 +1,12 @@
 import { FC } from 'react';
 
-import useCurrentUser from 'hooks/useCurrentUser';
 import { useSignOut } from 'lib/apollo/hooks/actions/auth';
+import useCurrentUser from 'hooks/useCurrentUser';
 
-// import Header from 'components/shared/organisms/Header';
 import Sidebar from 'components/shared/organisms/Sidebar';
 
+import { PageContent, Wrapper } from './styled';
 import { TDefaultTemplate } from './types';
-import { Wrapper, PageContent } from './styled';
 
 const DefaultTemplate: FC<TDefaultTemplate> = ({ children, testId = 'default-template' }) => {
   const { user } = useCurrentUser();
@@ -16,7 +15,6 @@ const DefaultTemplate: FC<TDefaultTemplate> = ({ children, testId = 'default-tem
   return (
     <Wrapper data-testid={testId}>
       <Sidebar user={user} signOut={signOut} />
-      {/* <Header user={user} signOut={signOut} /> */}
       <PageContent>{children}</PageContent>
     </Wrapper>
   );

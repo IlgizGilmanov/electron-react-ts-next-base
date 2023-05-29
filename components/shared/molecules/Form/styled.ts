@@ -7,8 +7,9 @@ export const FormWrapper = styled.div<TWidth>(
     width: ${$width};
 
     [type='file'] {
-      border: none;
       padding: 0;
+
+      border: none;
     }
 
     input[type='checkbox'],
@@ -29,6 +30,7 @@ export const FormContainer = styled.div`
 
 export const FieldWrapper = styled.div`
   position: relative;
+
   margin-bottom: 0.75rem;
 
   /* input,
@@ -50,7 +52,8 @@ export const FieldLabel = styled.label`
 `;
 
 export const ErrorWrapper = styled.div`
+  padding: 0.5rem 0 0 1rem;
+
   font-size: 0.9rem;
   color: red;
-  padding: 0.5rem 0 0 1rem;
 `;

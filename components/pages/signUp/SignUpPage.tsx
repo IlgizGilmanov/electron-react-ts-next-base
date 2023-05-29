@@ -1,14 +1,16 @@
 import withAuth from 'lib/auth/withAuth';
-import withGetDataFromTree from 'lib/apollo/withGetDataFromTree';
 import withNotAuthSecurity from 'lib/auth/withNotAuthSecurity';
-import { TNextPage } from 'lib/apollo/types';
+import withGetDataFromTree from 'lib/apollo/withGetDataFromTree';
+
 import { SIGNIN } from 'config/routes';
+import { TNextPage } from 'lib/apollo/types';
+
+import ActionLink from 'components/shared/atoms/ActionLink';
 import AuthTemplate, {
   AuthRegularText,
   AuthSubtitle,
   AuthTitle,
 } from 'components/shared/templates/AuthTemplate';
-import ActionLink from 'components/shared/atoms/ActionLink';
 
 import SignUpForm from './components/SignUpForm';
 
