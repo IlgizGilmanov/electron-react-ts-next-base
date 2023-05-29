@@ -8,7 +8,7 @@ import Form, { FormFieldType } from 'components/shared/molecules/Form';
 
 import { TFormValues } from './types';
 
-const RecoveryEmailForm = ({ onSubmit }: { onSubmit?: () => void }) => {
+const VerifyEmailForm = ({ onSubmit }: { onSubmit?: () => void }) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [recoveryPassword, detailMessage] = usePasswordRecovery();
   const { setInfo } = useNotifier();
@@ -30,14 +30,13 @@ const RecoveryEmailForm = ({ onSubmit }: { onSubmit?: () => void }) => {
       },
       {
         type: FormFieldType.submit,
-        name: 'Reset Password',
+        name: 'Verify Email',
         testId: 'submit-button',
       },
     ],
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onSubmit: async (values: TFormValues) => {
       // await recoveryPassword(values);
-
       if (onSubmit) {
         onSubmit();
       }
@@ -47,4 +46,4 @@ const RecoveryEmailForm = ({ onSubmit }: { onSubmit?: () => void }) => {
   return <Form form={form} $width="100%" />;
 };
 
-export default RecoveryEmailForm;
+export default VerifyEmailForm;
