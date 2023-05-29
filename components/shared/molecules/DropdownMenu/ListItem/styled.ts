@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Option = styled.button<{ $isActive: boolean; $isSelected: boolean }>(
+export const Option = styled.button<{ $isActive?: boolean; $isSelected?: boolean }>(
   ({ $isActive, $isSelected, theme: { colors } }) => css`
     padding: 0.675rem;
     background-color: ${$isActive ? colors.customGrey2 : colors.white};

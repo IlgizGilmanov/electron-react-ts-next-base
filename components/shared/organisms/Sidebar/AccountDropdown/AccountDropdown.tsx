@@ -1,10 +1,18 @@
 import { FloatingFocusManager, FloatingList } from '@floating-ui/react';
 
-import Icon from 'components/shared/atoms/Icon';
 import { useDropdownMenu } from 'components/shared/molecules/DropdownMenu';
-import { TAccountDropdown } from './types';
-import { StyledReference, Avatar, StyledList } from './styled';
+import ProfileImage from 'components/shared/atoms/ProfileImage';
+
 import MenuList from './MenuList';
+import { TAccountDropdown } from './types';
+import {
+  StyledReference,
+  AvatarWrapper,
+  UserInfo,
+  UserName,
+  UserEmail,
+  StyledList,
+} from './styled';
 
 const AccountDropdown = ({ user, signOut }: TAccountDropdown) => {
   const {
@@ -23,9 +31,13 @@ const AccountDropdown = ({ user, signOut }: TAccountDropdown) => {
   return (
     <>
       <StyledReference tabIndex={0} ref={refs.setReference} {...getReferenceProps()}>
-        <Avatar />
-        <span>{[user.firstName, user.lastName].join(' ')}</span>
-        <Icon name="arrow-chevron-down" $color="transparent" />
+        <AvatarWrapper>
+          <ProfileImage avatar={user.avatarUrl} alt={user.email} />
+        </AvatarWrapper>
+        <UserInfo>
+          <UserName>{[user.firstName, user.lastName].join(' ')}</UserName>
+          <UserEmail>{user.email}</UserEmail>
+        </UserInfo>
       </StyledReference>
       {isOpen && (
         <FloatingFocusManager context={context} modal={false}>

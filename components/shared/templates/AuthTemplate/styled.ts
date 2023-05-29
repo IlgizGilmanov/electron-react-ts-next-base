@@ -21,7 +21,7 @@ export const FormContent = styled.div`
 
 export const ImageWrapper = styled.div`
   flex: 1 1 50%;
-  background-image: url('/images/auth-bg.png');
+  background-image: url('${process.env.ASSET_HOST}/images/auth-bg.png');
   background-color: #9babdb; // average image color
   background-repeat: no-repeat;
   background-position: center;

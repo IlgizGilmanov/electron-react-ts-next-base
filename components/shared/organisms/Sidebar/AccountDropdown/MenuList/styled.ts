@@ -1,14 +1,12 @@
 import styled, { css } from 'styled-components';
 
-export const Option = styled.button(
-  ({ theme: { colors } }) => css`
-    border: 0;
-    padding: 0.75rem;
-    text-align: left;
+import { BaseOption } from 'components/shared/molecules/DropdownMenu';
 
+export const Option = styled(BaseOption)(
+  ({ theme: { colors } }) => css`
     &:hover,
     &:focus {
-      background-color: ${colors.grey_300};
+      background-color: ${colors.customGrey2};
     }
   `,
 );

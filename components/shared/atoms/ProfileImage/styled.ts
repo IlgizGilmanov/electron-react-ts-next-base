@@ -1,17 +1,13 @@
-import styled, { css } from 'styled-components';
-import { transparentize } from 'polished';
+import styled from 'styled-components';
 
-export const ImageWrapper = styled.div(
-  ({ theme: { colors } }) => css`
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: 1px 4px 4px ${transparentize(0.75, colors.black)};
-    font-size: 0;
-    overflow: hidden;
-  `,
-);
+export const ImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 0;
+  overflow: hidden;
+`;
 
 export const Image = styled.img`
   width: 100%;
