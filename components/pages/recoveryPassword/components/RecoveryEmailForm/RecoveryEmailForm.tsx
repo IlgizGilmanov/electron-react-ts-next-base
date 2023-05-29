@@ -10,7 +10,7 @@ import Form, { FormFieldType } from 'components/shared/molecules/Form';
 
 import { TFormValues } from './types';
 
-const RecoveryPasswordForm = () => {
+const RecoveryEmailForm = () => {
   const [recoveryPassword, detailMessage] = usePasswordRecovery();
   const { setInfo } = useNotifier();
 
@@ -43,4 +43,4 @@ const RecoveryPasswordForm = () => {
   return <Form form={form} $width="100%" />;
 };
 
-export default RecoveryPasswordForm;
+export default RecoveryEmailForm;

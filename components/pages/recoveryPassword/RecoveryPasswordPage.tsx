@@ -7,7 +7,7 @@ import AuthTemplate, { AuthSubtitle, AuthTitle } from 'components/shared/templat
 import ActionLink from 'components/shared/atoms/ActionLink';
 import Icon from 'components/shared/atoms/Icon';
 
-import RecoveryPasswordForm from './components/RecoveryPasswordForm';
+import RecoveryEmailForm from './components/RecoveryEmailForm';
 import { ActionLinkWrapper } from './styled';
 
 const RecoveryPasswordPage: TNextPage = () => {
@@ -19,7 +19,7 @@ const RecoveryPasswordPage: TNextPage = () => {
         <br />
         Follow the steps provided to reset your password.
       </AuthSubtitle>
-      <RecoveryPasswordForm />
+      <RecoveryEmailForm />
       <ActionLinkWrapper>
         <Icon name="arrow-left" $color="primary" />
         <ActionLink href={SIGNIN} label="Back to login" $weight={500} />
