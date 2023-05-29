@@ -4,21 +4,12 @@ import withAuth from 'lib/auth/withAuth';
 import withNotAuthSecurity from 'lib/auth/withNotAuthSecurity';
 import withGetDataFromTree from 'lib/apollo/withGetDataFromTree';
 import { TNextPage } from 'lib/apollo/types';
-import useCurrentUser from 'hooks/useCurrentUser';
 import { SIGNUP } from 'config/routes';
-import DefaultTemplate from 'components/shared/templates/DefaultTemplate';
+import AuthTemplate from 'components/shared/templates/AuthTemplate';
 import ActionLink from 'components/shared/atoms/ActionLink';
 
 import SignInForm from './components/SignInForm';
-import {
-  FormContent,
-  Title,
-  Subtitle,
-  PageContentWrapper,
-  NotMember,
-  ImageWrapper,
-  FormContentWrapper,
-} from './styled';
+import { Title, Subtitle, NotMember } from './styled';
 
 const SignInPage: TNextPage = () => {
   useEffect(() => {
@@ -29,27 +20,17 @@ const SignInPage: TNextPage = () => {
     };
     callback();
   });
-  const { user } = useCurrentUser();
 
   return (
-    <DefaultTemplate testId="signin-page">
-      {!user && (
-        <PageContentWrapper>
-          <FormContentWrapper>
-            <FormContent>
-              <Title>Login to account</Title>
-              <Subtitle>Enter your credentials to use ChatterAI</Subtitle>
-              <SignInForm />
-              <p>
-                <NotMember>Not a member?</NotMember>
-                <ActionLink href={SIGNUP} label="Create account" $weight={500} />
-              </p>
-            </FormContent>
-          </FormContentWrapper>
-          <ImageWrapper />
-        </PageContentWrapper>
-      )}
-    </DefaultTemplate>
+    <AuthTemplate testId="signin-page">
+      <Title>Login to account</Title>
+      <Subtitle>Enter your credentials to use ChatterAI</Subtitle>
+      <SignInForm />
+      <p>
+        <NotMember>Not a member?</NotMember>
+        <ActionLink href={SIGNUP} label="Create Account" $weight={500} />
+      </p>
+    </AuthTemplate>
   );
 };
 
