@@ -28,6 +28,7 @@ const SignInForm = () => {
       {
         type: FormFieldType.text,
         name: 'email',
+        title: 'Email',
         placeholder: 'Enter email',
         testId: 'input-email',
         initialValue: DEFAULT_EMAIL || '',
@@ -36,6 +37,7 @@ const SignInForm = () => {
       {
         type: FormFieldType.password,
         name: 'password',
+        title: 'Password',
         placeholder: 'Enter password',
         testId: 'input-password',
         initialValue: DEFAULT_PASSWORD || '',

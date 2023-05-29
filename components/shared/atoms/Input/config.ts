@@ -19,8 +19,8 @@ export const backgroundColorConfig: TVariantConfig = {
 };
 
 export const marginConfig: TMarginConfig = {
-  default: 20,
-  secondary: 20,
+  default: 25,
+  secondary: 25,
 };
 
 export const colorConfig: TVariantConfig = {

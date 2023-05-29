@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const PageContentWrapper = styled.div`
   display: flex;
@@ -28,3 +28,24 @@ export const ImageWrapper = styled.div`
   background-size: cover;
   border-radius: 0.75rem;
 `;
+
+export const AuthTitle = styled.h1`
+  margin: 0.75rem 0;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+`;
+
+export const AuthSubtitle = styled.p`
+  margin: 0 0 1.5rem;
+  font-weight: 300;
+`;
+
+export const AuthRegularText = styled.span(
+  ({ theme: { colors } }) => css`
+    margin-right: 0.5rem;
+    color: ${colors.secondaryText};
+    font-size: 0.875rem;
+    line-height: 1rem;
+  `,
+);

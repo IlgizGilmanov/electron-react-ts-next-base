@@ -5,11 +5,14 @@ import withNotAuthSecurity from 'lib/auth/withNotAuthSecurity';
 import withGetDataFromTree from 'lib/apollo/withGetDataFromTree';
 import { TNextPage } from 'lib/apollo/types';
 import { SIGNUP } from 'config/routes';
-import AuthTemplate from 'components/shared/templates/AuthTemplate';
+import AuthTemplate, {
+  AuthRegularText,
+  AuthSubtitle,
+  AuthTitle,
+} from 'components/shared/templates/AuthTemplate';
 import ActionLink from 'components/shared/atoms/ActionLink';
 
 import SignInForm from './components/SignInForm';
-import { Title, Subtitle, NotMember } from './styled';
 
 const SignInPage: TNextPage = () => {
   useEffect(() => {
@@ -23,11 +26,11 @@ const SignInPage: TNextPage = () => {
 
   return (
     <AuthTemplate testId="signin-page">
-      <Title>Login to account</Title>
-      <Subtitle>Enter your credentials to use ChatterAI</Subtitle>
+      <AuthTitle>Login to account</AuthTitle>
+      <AuthSubtitle>Enter your credentials to use ChatterAI</AuthSubtitle>
       <SignInForm />
       <p>
-        <NotMember>Not a member?</NotMember>
+        <AuthRegularText>Not a member?</AuthRegularText>
         <ActionLink href={SIGNUP} label="Create Account" $weight={500} />
       </p>
     </AuthTemplate>
