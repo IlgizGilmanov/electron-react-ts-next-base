@@ -30,6 +30,17 @@ export const getFillStyles = ({ $color = 'black' }: TIconBase) => {
   `;
 };
 
+export const getStrokeStyles = ({ $strokeColor }: TIconBase) => {
+  if (!$strokeColor) return '';
+
+  return css`
+    & path {
+      transition: stroke 0.5s;
+      stroke: ${configColors[$strokeColor]};
+    }
+  `;
+};
+
 export const getRotateStyles = ({ $rotate = '0' }: TIconBase) => {
   return css`
     transition: transform 0.2s;

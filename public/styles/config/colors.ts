@@ -39,7 +39,9 @@ type CustomColors =
   | 'primaryText'
   | 'secondaryText'
   | 'inputPlaceholder'
-  | 'inputBorder';
+  | 'customGrey1'
+  | 'customGrey2'
+  | 'customGrey3';
 
 export type ColorKeys = 'black' | 'white' | 'transparent' | RegularColors | CustomColors;
 
@@ -50,7 +52,9 @@ export const configColors: Colors = {
   primaryText: '#0A090B',
   secondaryText: '#4F4D55',
   inputPlaceholder: '#7F7D83',
-  inputBorder: '#E6E6E6',
+  customGrey1: '#E6E6E6',
+  customGrey2: '#F6F6F6',
+  customGrey3: '#F5F5F5',
 
   black: '#111827',
   white: '#FFFFFF',

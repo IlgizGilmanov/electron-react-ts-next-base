@@ -1,6 +1,5 @@
 import { useListItem } from '@floating-ui/react';
 
-import { configColors } from 'public/styles/config/colors';
 import { Option } from './styled';
 import { TListItem } from './types';
 
@@ -16,10 +15,8 @@ const ListItem = ({ label, activeIndex, selectedIndex, getItemProps, handleSelec
       ref={ref}
       role="option"
       aria-selected={isActive && isSelected}
-      style={{
-        background: isActive ? configColors.grey_300 : '',
-        fontWeight: isSelected ? 'bold' : '',
-      }}
+      $isActive={isActive}
+      $isSelected={isSelected}
       {...getItemProps({
         onClick: () => handleSelect(index),
       })}

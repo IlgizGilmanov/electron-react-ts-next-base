@@ -38,7 +38,12 @@ const DropdownMenu = ({
     <>
       <StyledReference tabIndex={0} ref={refs.setReference} {...getReferenceProps()}>
         <span>{selectedLabel ?? defaultLabel}</span>
-        <Icon name="arrow-chevron-down" $color="transparent" />
+        <Icon
+          name="arrow-chevron-down"
+          $color="transparent"
+          $strokeColor="primaryText"
+          $size={20}
+        />
       </StyledReference>
       {isOpen && (
         <FloatingFocusManager context={context} modal={false}>

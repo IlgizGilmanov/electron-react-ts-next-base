@@ -5,6 +5,7 @@ import { IconKeys } from './config';
 export type TIconBase = TMargin & {
   $size?: number | 'fit';
   $color?: ColorKeys;
+  $strokeColor?: ColorKeys;
   $rotate?: string;
 };
 

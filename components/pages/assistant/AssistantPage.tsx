@@ -57,13 +57,13 @@ export const AssistantPage: TNextPage = () => {
       <Wrapper>
         <PageHeader title="AI Assistant">
           <DropdownMenu
-            defaultLabel="Tone of voice"
+            defaultLabel="Tone of Voice"
             menuItems={toneOfVoiceItems}
             selectedIndex={selectedToneOfVoiceIndex}
             onSelect={handleToneOfVoiceSelect}
           />
           <DropdownMenu
-            defaultLabel="Speech style"
+            defaultLabel="Speech Style"
             menuItems={speechStyleItems}
             selectedIndex={selectedSpeechStyleIndex}
             onSelect={handleSpeechStyleSelect}
