@@ -7,4 +7,9 @@ export type TTabItem = {
   testId: string;
 };
 
-export type TTabs = { tabs: TTabItem[] };
+export type TTabGroup = {
+  name: string;
+  items: TTabItem[];
+};
+
+export type TTabs = { tabGroups: TTabGroup[] };

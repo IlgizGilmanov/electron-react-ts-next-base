@@ -3,20 +3,29 @@ import { useRouter } from 'next/router';
 
 import Icon from 'components/shared/atoms/Icon';
 import { TTabs } from './types';
-import { TabItem, Wrapper } from './styled';
+import { Wrapper, TabItem, TabGroup, TabGroupName } from './styled';
 
-const Tabs = ({ tabs }: TTabs) => {
+const Tabs = ({ tabGroups }: TTabs) => {
   const { pathname } = useRouter();
 
   return (
     <Wrapper data-testid="sidebar-tabs">
-      {tabs.map(({ text, url, iconName, testId }) => (
-        <TabItem key={text} data-testid={testId}>
-          <Link href={url} passHref>
-            <Icon name={iconName} $color={pathname === url ? 'red_500' : 'black'} $size={20} />
-            <span>{text}</span>
-          </Link>
-        </TabItem>
+      {tabGroups.map(group => (
+        <TabGroup>
+          <TabGroupName>{group.name}</TabGroupName>
+          {group.items.map(({ text, url, iconName, testId }) => (
+            <TabItem key={text} data-testid={testId} $isActive={pathname === url}>
+              <Link href={url} passHref>
+                <Icon
+                  name={iconName}
+                  $color={pathname === url ? 'primary' : 'secondaryText'}
+                  $size={18}
+                />
+                <span>{text}</span>
+              </Link>
+            </TabItem>
+          ))}
+        </TabGroup>
       ))}
     </Wrapper>
   );

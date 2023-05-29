@@ -1,2 +1,2 @@
 export { default } from './Tabs';
-export type { TTabItem } from './types';
+export type { TTabGroup } from './types';

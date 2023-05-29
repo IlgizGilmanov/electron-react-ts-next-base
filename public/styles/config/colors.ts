@@ -41,7 +41,9 @@ type CustomColors =
   | 'inputPlaceholder'
   | 'customGrey1'
   | 'customGrey2'
-  | 'customGrey3';
+  | 'customGrey3'
+  | 'customGrey4'
+  | 'global_blue_200';
 
 export type ColorKeys = 'black' | 'white' | 'transparent' | RegularColors | CustomColors;
 
@@ -55,6 +57,8 @@ export const configColors: Colors = {
   customGrey1: '#E6E6E6',
   customGrey2: '#F6F6F6',
   customGrey3: '#F5F5F5',
+  customGrey4: '#ADACB0',
+  global_blue_200: '#F5F8FD',
 
   black: '#111827',
   white: '#FFFFFF',
