@@ -8,14 +8,14 @@ export const StyledReference = styled.div(
     align-items: center;
     gap: 0.75rem;
     padding: 0.625rem;
-    border: 1px solid ${colors.customGrey1};
+    border: 1px solid ${colors.custom_grey_1};
     border-radius: 0.375rem;
     cursor: pointer;
     box-shadow: 0px 3px 4px -5px rgba(24, 24, 28, 0.03), 0px 1px 2px rgba(24, 24, 28, 0.04);
 
     &:hover,
     &:focus {
-      background-color: ${colors.customGrey3};
+      background-color: ${colors.custom_grey_3};
     }
   `,
 );
@@ -33,7 +33,7 @@ export const UserInfo = styled.div`
 
 export const UserName = styled.span(
   ({ theme: { colors } }) => css`
-    color: ${colors.primaryText};
+    color: ${colors.primary_text};
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 500;
@@ -42,7 +42,7 @@ export const UserName = styled.span(
 
 export const UserEmail = styled.span(
   ({ theme: { colors } }) => css`
-    color: ${colors.secondaryText};
+    color: ${colors.secondary_text};
     font-size: 0.625rem;
     line-height: 0.75rem;
     font-weight: 300;

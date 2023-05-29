@@ -11,13 +11,13 @@ export const StyledReference = styled.div(
     cursor: pointer;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    background-color: ${colors.customGrey3};
-    color: ${colors.primaryText};
+    background-color: ${colors.custom_grey_3};
+    color: ${colors.primary_text};
     border-radius: 1.25rem;
 
     &:hover,
     &:focus {
-      background-color: ${colors.customGrey1};
+      background-color: ${colors.custom_grey_1};
     }
   `,
 );
@@ -29,7 +29,7 @@ export const StyledList = styled.ul(
     min-width: 180px;
     padding: 0.625rem;
     background-color: ${colors.white};
-    border: 1px solid ${colors.customGrey1};
+    border: 1px solid ${colors.custom_grey_1};
     border-radius: 0.375rem;
     ${defaultBoxShadow};
   `,

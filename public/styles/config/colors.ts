@@ -36,13 +36,13 @@ type RegularColors = `${ColorShades}_${ColorIntensity}`;
 
 type CustomColors =
   | 'primary'
-  | 'primaryText'
-  | 'secondaryText'
-  | 'inputPlaceholder'
-  | 'customGrey1'
-  | 'customGrey2'
-  | 'customGrey3'
-  | 'customGrey4'
+  | 'primary_text'
+  | 'secondary_text'
+  | 'input_placeholder'
+  | 'custom_grey_1'
+  | 'custom_grey_2'
+  | 'custom_grey_3'
+  | 'custom_grey_4'
   | 'global_blue_200';
 
 export type ColorKeys = 'black' | 'white' | 'transparent' | RegularColors | CustomColors;
@@ -51,13 +51,13 @@ type Colors = { [key in ColorKeys]: Property.Color };
 
 export const configColors: Colors = {
   primary: '#6417C4',
-  primaryText: '#0A090B',
-  secondaryText: '#4F4D55',
-  inputPlaceholder: '#7F7D83',
-  customGrey1: '#E6E6E6',
-  customGrey2: '#F6F6F6',
-  customGrey3: '#F5F5F5',
-  customGrey4: '#ADACB0',
+  primary_text: '#0A090B',
+  secondary_text: '#4F4D55',
+  input_placeholder: '#7F7D83',
+  custom_grey_1: '#E6E6E6',
+  custom_grey_2: '#F6F6F6',
+  custom_grey_3: '#F5F5F5',
+  custom_grey_4: '#ADACB0',
   global_blue_200: '#F5F8FD',
 
   black: '#111827',

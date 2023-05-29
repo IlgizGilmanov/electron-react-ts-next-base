@@ -45,7 +45,7 @@ export const AuthSubtitle = styled.p`
 export const AuthRegularText = styled.span(
   ({ theme: { colors } }) => css`
     margin-right: 0.5rem;
-    color: ${colors.secondaryText};
+    color: ${colors.secondary_text};
     font-size: 0.875rem;
     line-height: 1rem;
   `,

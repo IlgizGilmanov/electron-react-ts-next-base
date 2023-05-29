@@ -41,7 +41,7 @@ const DropdownMenu = ({
         <Icon
           name="arrow-chevron-down"
           $color="transparent"
-          $strokeColor="primaryText"
+          $strokeColor="primary_text"
           $size={20}
         />
       </StyledReference>

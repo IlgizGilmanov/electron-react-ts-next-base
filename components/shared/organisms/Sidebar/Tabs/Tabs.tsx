@@ -18,7 +18,7 @@ const Tabs = ({ tabGroups }: TTabs) => {
               <Link href={url} passHref>
                 <Icon
                   name={iconName}
-                  $color={pathname === url ? 'primary' : 'secondaryText'}
+                  $color={pathname === url ? 'primary' : 'secondary_text'}
                   $size={18}
                 />
                 <span>{text}</span>

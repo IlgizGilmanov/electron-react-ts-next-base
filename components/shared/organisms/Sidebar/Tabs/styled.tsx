@@ -15,7 +15,7 @@ export const TabGroupName = styled.div(
   ({ theme: { colors } }) => css`
     margin-bottom: 0.25rem;
     padding-left: 0.625rem;
-    color: ${colors.customGrey4};
+    color: ${colors.custom_grey_4};
     font-size: 0.875rem;
     line-height: 1.25rem;
   `,
@@ -37,7 +37,7 @@ export const TabItem = styled.li<{ $isActive: boolean }>(
       font-size: 0.875rem;
       font-weight: 300;
       line-height: 1.25rem;
-      color: ${colors.secondaryText};
+      color: ${colors.secondary_text};
       text-align: left;
 
       ${$isActive &&

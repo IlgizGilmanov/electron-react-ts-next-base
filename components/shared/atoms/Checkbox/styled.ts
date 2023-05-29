@@ -39,7 +39,7 @@ const getCheckmarkStyles = ({ position, size, checked }: TCheckmarkProps) => {
     height: ${size};
     margin-left: ${position.marginLeft};
     margin-right: ${position.marginRight};
-    border: 2px solid ${checked ? theme.colors.primary : theme.colors.customGrey1};
+    border: 2px solid ${checked ? theme.colors.primary : theme.colors.custom_grey_1};
     border-radius: 5px;
     content: '';
     background-position: center;

@@ -25,7 +25,7 @@ export const FieldWrapper = styled.div(
       border: 0;
 
       ::placeholder {
-        color: ${theme.colors.inputPlaceholder};
+        color: ${theme.colors.input_placeholder};
       }
 
       :disabled {

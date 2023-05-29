@@ -7,6 +7,6 @@ export const SidebarWrapper = styled.nav(
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem 1.25rem;
-    border-right: 1px solid ${colors.customGrey1};
+    border-right: 1px solid ${colors.custom_grey_1};
   `,
 );

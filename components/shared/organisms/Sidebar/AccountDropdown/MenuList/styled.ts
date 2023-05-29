@@ -6,7 +6,7 @@ export const Option = styled(BaseOption)(
   ({ theme: { colors } }) => css`
     &:hover,
     &:focus {
-      background-color: ${colors.customGrey2};
+      background-color: ${colors.custom_grey_2};
     }
   `,
 );
