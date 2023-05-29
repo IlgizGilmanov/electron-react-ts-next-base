@@ -15,7 +15,7 @@ export const FormContentWrapper = styled.div`
 `;
 
 export const FormContent = styled.div`
-  width: 25rem; // 400px
+  width: 29rem; // 400px
   padding: 2rem;
 `;
 
@@ -30,7 +30,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const AuthTitle = styled.h1`
-  margin: 0.75rem 0;
+  margin: 0 0 0.75rem;
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 500;
@@ -39,6 +39,7 @@ export const AuthTitle = styled.h1`
 export const AuthSubtitle = styled.p`
   margin: 0 0 1.5rem;
   font-weight: 300;
+  line-height: 22px;
 `;
 
 export const AuthRegularText = styled.span(

@@ -4,6 +4,7 @@ export const configIcons = {
   'arrow-chevron-left': icons.ArrowChevronLeft,
   'arrow-chevron-right': icons.ArrowChevronRight,
   'arrow-chevron-down': icons.ArrowChevronDown,
+  'arrow-left': icons.ArrowLeft,
   'eye-closed': icons.EyeClosed,
   close: icons.Close,
   eye: icons.Eye,

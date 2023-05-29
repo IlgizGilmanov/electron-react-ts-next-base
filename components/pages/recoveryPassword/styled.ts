@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const PageContentWrapper = styled.div`
+export const ActionLinkWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 `;

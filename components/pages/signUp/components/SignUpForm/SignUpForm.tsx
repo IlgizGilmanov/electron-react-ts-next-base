@@ -70,7 +70,7 @@ const SignUpForm = () => {
     },
   };
 
-  return <Form form={form} $width="20rem" />;
+  return <Form form={form} $width="100%" />;
 };
 
 export default SignUpForm;

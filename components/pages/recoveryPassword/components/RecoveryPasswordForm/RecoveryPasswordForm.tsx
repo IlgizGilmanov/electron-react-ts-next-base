@@ -24,14 +24,14 @@ const RecoveryPasswordForm = () => {
         type: FormFieldType.text,
         name: 'email',
         title: 'Email',
-        placeholder: 'Email',
+        placeholder: 'Enter email',
         testId: 'input-email',
         initialValue: '',
         validationSchema: Yup.string().email(EMAIL_INVALID).max(255).required(REQUIRED_FIELD),
       },
       {
         type: FormFieldType.submit,
-        name: 'Submit',
+        name: 'Reset Password',
         testId: 'submit-button',
       },
     ],
@@ -40,7 +40,7 @@ const RecoveryPasswordForm = () => {
     },
   };
 
-  return <Form form={form} $width="20rem" />;
+  return <Form form={form} $width="100%" />;
 };
 
 export default RecoveryPasswordForm;

@@ -4,6 +4,7 @@ import Eye from './eye.svg';
 import ArrowChevronLeft from './arrow-chevron-left.svg';
 import ArrowChevronRight from './arrow-chevron-right.svg';
 import ArrowChevronDown from './arrow-chevron-down.svg';
+import ArrowLeft from './arrow-left.svg';
 import Plus from './plus.svg';
 import Minus from './minus.svg';
 import Activity from './activity.svg';
@@ -15,6 +16,7 @@ export {
   ArrowChevronLeft,
   ArrowChevronRight,
   ArrowChevronDown,
+  ArrowLeft,
   EyeClosed,
   Eye,
   Plus,
