@@ -11,10 +11,14 @@ const Tabs = ({ tabGroups }: TTabs) => {
   return (
     <Wrapper data-testid="sidebar-tabs">
       {tabGroups.map(group => (
-        <TabGroup>
+        <TabGroup key={`tab-group-${group.name}`}>
           <TabGroupName>{group.name}</TabGroupName>
           {group.items.map(({ text, url, iconName, testId }) => (
-            <TabItem key={text} data-testid={testId} $isActive={pathname === url}>
+            <TabItem
+              key={`tab-group-item-${text}`}
+              data-testid={testId}
+              $isActive={pathname === url}
+            >
               <Link href={url} passHref>
                 <Icon
                   name={iconName}
