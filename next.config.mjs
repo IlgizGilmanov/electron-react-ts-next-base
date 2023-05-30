@@ -10,6 +10,8 @@ const withBundleAnalyzer = withAnalyzer({
 const transpileDependencies = [];
 
 const nextConfig = {
+  output: 'export',
+  distDir: 'dist',
   compiler: {
     styledComponents: true,
   },

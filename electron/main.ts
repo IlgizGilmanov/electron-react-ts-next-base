@@ -23,7 +23,7 @@ const createWindow = () => {
 
   // win.loadFile('index.html');
   win.loadURL(
-    isDev ? 'http://localhost:8080' : `file://${path.resolve(__dirname, './out/signin.html')}`,
+    isDev ? 'http://localhost:8080' : `file://${path.resolve(__dirname, '../dist/signin.html')}`,
   );
 };
 
