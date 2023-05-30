@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import defaultTransition from './config/defaultTransition';
+
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -16,9 +18,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     min-height: calc(var(--vh) * 100);
-    margin: 0;
     padding: 0;
-    font-family: 'IBMPlexSans', sans-serif;
+    margin: 0;
+
+    font-family: IBMPlexSans, sans-serif;
   }
 
   :focus {
@@ -32,25 +35,28 @@ const GlobalStyle = createGlobalStyle`
 
   input,
   textarea {
-    font-family: 'IBMPlexSans', sans-serif;
+    font-family: IBMPlexSans, sans-serif;
   }
 
   a, button {
+    font-family: IBMPlexSans, sans-serif;
+
     cursor: pointer;
-    font-family: 'IBMPlexSans', sans-serif;
   }
 
   a {
-    text-decoration: none;
-    transition: all .25s ease-in-out 0s;
-    outline: none;
     color: ${({ theme }) => theme.colors.blue_500};
+    text-decoration: none;
+
+    outline: none;
+    ${defaultTransition};
   }
 
   ul, ol {
-    list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+
+    list-style: none;
   }
 `;
 

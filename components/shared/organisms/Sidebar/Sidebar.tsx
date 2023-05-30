@@ -11,8 +11,8 @@ const tabGroups: TTabGroup[] = [
   {
     name: 'Assistant',
     items: [
-      { text: 'Assistant', url: ASSISTANT, iconName: 'activity', testId: 'assistant' },
-      { text: 'History', url: HISTORY, iconName: 'history', testId: 'history' },
+      { text: 'Assistant', url: ASSISTANT, iconName: 'message-circle', testId: 'assistant' },
+      { text: 'History', url: HISTORY, iconName: 'user-profile', testId: 'history' },
     ],
   },
   {

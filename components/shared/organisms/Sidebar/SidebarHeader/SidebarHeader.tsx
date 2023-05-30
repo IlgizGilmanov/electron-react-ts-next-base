@@ -6,7 +6,7 @@ const SidebarHeader = () => {
   return (
     <Wrapper>
       <LogoWrapper>
-        <Icon name="settings" $size={10} $color="white" />
+        <Icon name="app-logo" $size={11} $color="white" />
       </LogoWrapper>
       <span>ChatterAI</span>
     </Wrapper>

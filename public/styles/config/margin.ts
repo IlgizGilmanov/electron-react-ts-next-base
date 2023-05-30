@@ -9,9 +9,7 @@ export type TMargin = {
 
 export const getMarginStyles = ({ $ml = 0, $mr = 0, $mt = 0, $mb = 0 }: TMargin) => {
   return css`
-    margin-right: ${$mr === 'auto' ? $mr : `${$mr}px`};
-    margin-left: ${$ml === 'auto' ? $ml : `${$ml}px`};
-    margin-bottom: ${$mb === 'auto' ? $mb : `${$mb}px`};
-    margin-top: ${$mt === 'auto' ? $mt : `${$mt}px`};
+    margin: ${$mt === 'auto' ? $mt : `${$mt}px`} ${$mr === 'auto' ? $mr : `${$mr}px`}
+      ${$mb === 'auto' ? $mb : `${$mb}px`} ${$ml === 'auto' ? $ml : `${$ml}px`};
   `;
 };

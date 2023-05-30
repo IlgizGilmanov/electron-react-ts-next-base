@@ -1,0 +1,9 @@
+*.d.ts
+/graphql/types.tsx
+/graphql/**/__generated__/**
+/storybook-static/
+/test-results/
+/playwright-report/
+config/vars.ts
+/.next
+/out
